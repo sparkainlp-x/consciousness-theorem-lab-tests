@@ -31,6 +31,10 @@ Four sub-claims: cI-A slide identities (D=cos²θ, C=sin²θ, C+D=1, R_s−R_k=c
 
 1. **T1** (gate, cheapest, cloud qubits) → 2. **T2** (is C real entanglement?) → 3. **T4** (the falsification test) → 4. **T3** (duality) → 5. **T6** (quantify the gap) → 6. **T5** (eraser, needs a lab).
 
+## Reference implementation
+
+`t1_reference.py` is the T1 analysis pipeline as runnable code (numpy, no hardware). It builds ψ(θ), computes D, C, R_s, R_k, and checks every frozen T1 bar on the 7-point and 24-point grids. Measured 2026-11-24: **PASS**, exit 0 — the table reproduces the plan's predictions exactly. This validates the pipeline the hardware run will be compared against; it is not a hardware result.
+
 ## The honest limit, stated first
 
 These tests measure **two-qubit geometry** — the quantities D, C, R, V, and S. They do **not** measure consciousness or experience. If all pass, the structure is confirmed on hardware; the interpretation that it is consciousness remains interpretive. The noisy observer-direction anti-correlation (bridge claims xxxii/xxxv/xci/xcii — all FAIL on some seeds) is deliberately **not** re-tested as a lab claim, because the bridge already falsified it as a per-seed guarantee and the lab's noise (decoherence) is not the bridge's vector noise.

@@ -2,6 +2,18 @@
 # SPDX-License-Identifier: AGPL-3.0-only
 # Changelog
 
+## 0.1.1 (2026-11-24)
+
+- Adds `t1_reference.py`: the T1 analysis pipeline as runnable code.
+  Builds ψ(θ) = cos θ |00⟩ + sin θ (|01⟩+|10⟩)/√2, computes D, C,
+  R_s, R_k from the statevector, and checks every frozen T1 bar
+  (value ±0.02, C+D−1 ±0.03, split, θ+π closure, θ+π/2 swap) on
+  the 7-point and 24-point grids. **Measured: PASS** — the table
+  reproduces the plan's predictions exactly (D=cos²θ, C=sin²θ,
+  flip at π/4, closure, swap), exit 0. This validates the pipeline
+  the hardware run will be compared against; it is not a hardware
+  result. No plan text or bar changed.
+
 ## 0.1.0 (2026-11-24)
 
 - Plan only. No test has been run; no number in this repository is measured.
